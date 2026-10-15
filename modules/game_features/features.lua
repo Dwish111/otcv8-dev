@@ -16,6 +16,10 @@ function updateFeatures(version)
     --g_game.enableFeature(GameExtendedOpcode)
     --g_game.enableFeature(GameMinimapLimitedToSingleFloor) -- it will generate minimap only for current floor
     --g_game.enableFeature(GameSpritesAlphaChannel)
+
+    -- Phase 3 Change B: block game actions issued by Lua code that is not
+    -- responding to real player input (anti-bot). See build-bible.md Phase 3.
+    g_game.enableFeature(GameBotProtection)
     
     if(version >= 770) then
         g_game.enableFeature(GameLooktypeU16)
